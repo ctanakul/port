@@ -43,6 +43,10 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
+.bigFont li{
+font-size:16px;
+}
+
 body {
   margin: 0;
 }
