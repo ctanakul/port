@@ -65,13 +65,13 @@
 			<div class="col-lg-15">
 			  <p>&nbsp;</p>
 			  <p>&nbsp;</p>
-			  <p>With the versatility of Baxter, the robot by Rethink Robotics, and powerful and well-structured ROS system, we turn Baxter into a smart barista who can detect a type of drinks and mix them with a preferred set of order.</p>
-			  <p>My role on the team was planning and coding the IKSolver with Baxter's <a href="http://sdk.rethinkrobotics.com/wiki/API_Reference#Inverse_Kinematics_Solver_Service">IKservice</a></p>
+			  <p>With the versatility of Baxter, the robot by Rethink Robotics, and the powerful and well-structured ROS system, we turn Baxter into a smart barista who can detect different types of drinks and mix them with a preferred set of order.</p>
+			  <p>My role on the team was planning and coding the IKSolver with Baxter's <a href="http://sdk.rethinkrobotics.com/wiki/API_Reference#Inverse_Kinematics_Solver_Service">IKservice.</a></p>
 			  <p><b>Challenges</b></p>
 			  <p>
 			    <ul>
 			      <li>Baxter must grasp the cup at the side.</li>
-			      <li>While moving, the cup must not be tilted. (Except for self-detructing mode, a future plan)</li>
+			      <li>While moving, the cup must not be tilted. (Except for in self-detructing mode, a future plan)</li>
 			      <li>Since, IKSolver is quite random, sometimes, a valid solution will not be provided. To ensure the constant movement, the IKSolver must always be able to return the IKSolution from a seed position.</li>
 			    </ul>
 			  </p>
@@ -79,8 +79,8 @@
 			  <p>
 			    <ul>
 			      <li>The <a href="http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html">quarternion</a> of <a href="http://docs.ros.org/api/geometry_msgs/html/msg/Pose.html">Pose</a> in <a href="http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html">Posestamped</a> message was set to be the side-gripping posture.</li>
-			      <li>We incrementally moved him with a preset quarternion, which ensured non-tilted posture.</li>
-			      <li>The loop for IKService request was created and then terminated if the solution had been valid. There are more solutions to this such as randoming seed position in the request message</li>
+			      <li>We incrementally moved him with a preset quarternion, which ensured a non-tilted posture.</li>
+			      <li>The loop for IKService request was created and then terminated if the solution was valid. There are more solutions to this such as randomizing the seed position in the request message.</li>
 			    </ul>
 			  </p>
 			  <p><b>Let's see more</b></p>
