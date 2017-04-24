@@ -43,10 +43,9 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="work.html">Projects</a></li>
+            <li><a href="index.html">Projects</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <!-- <li><a href="blog.html">Blog</a></li> -->
+            <li><a href="assets/resume.pdf">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -67,14 +66,14 @@
 			  <p>&nbsp;</p>
                           <p><img class="img-responsive" src="assets/img/portfolio/work06_sawyer_catch_ball_diagram.png" alt=""></p>
 
-			  <p><b>Overview</b></p>
-			  <p>The goal of this project is to operate Sawyer, the manufacturing robot by Rethink Robotics, to catch a ball thrown at him. The hardware used are Sawyer and <a href="https://en.wikipedia.org/wiki/Stereo_camera">a stereo camera</a>, with RGB and depth sensor. The system functions in 3 main parts, detecting the ball position, predicting the final position of the ball and the moving the arm with Jacobian based endpoint control algorithm to catch the ball. The system is run via ROS and codes are written in Python.</p>
+			  <p><b><font size="5">Overview</font></b></p>
+			  <p><font size="4">The goal of this project is to operate Sawyer, the manufacturing robot by Rethink Robotics, to catch a ball thrown at him. The hardware used are Sawyer and <a href="https://en.wikipedia.org/wiki/Stereo_camera">a stereo camera</a>, with RGB and depth sensor. The system functions in 3 main parts, detecting the ball position, predicting the final position of the ball and the moving the arm with Jacobian based endpoint control algorithm to catch the ball. The system is run via ROS and codes are written in Python.</font></p>
 
 			  <p><b>Part 1: The Ball Detection System</b></p>
 	
 			  <p>Just like human needs eyes to see objects, Sawyer needs an RGBD camera to detect the position of the ball. Here, we use Asus Xtion Pro run with <a href="http://wiki.ros.org/openni2_launch">openni2</a> package. They can process a stream of RGB image and depth image separately. The RGB image is the multi-dimensional array of type uint8 with the size of x*y*3 specifying the color of each pixel based on RGB. The depth image is the matrix of type uint8 with the size of x*y. The number of each array represents the physical distance of that pixel from camera frame.</p>
                           <p><img class="img-responsive" src="assets/img/portfolio/work06_rgb_and_depth_img.png" alt=""></p>
-			  <p>Our strategy to detect the ball is to get the pixel at the center of the ball in RGB image and then access the depth of it in depth image.</p>
+			  <p>Our strategy for detecting the ball is to get the pixel at the center of the ball in RGB image and then access the depth of it in depth image.</p>
 			  <p>To get the pixel in RGB image, the color of the ball is tracked, the ball is then enclosed, and the approximated center is sent out. The image is first converted from ROS message to multi-dimensional array. Then, to get rid of the area with non-interesting color, we use <a href="http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html">cv2.inRange</a>. At this point, the important area might not be fully extracted. Thus, the image is further converted into HSV image to keep only a portion of specified HSV range with the same function. Noise or small non-interesting area is <a href="http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html#erosion">eroded</a> and the left important area, the ball, is <a href="http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html#dilation">dilated</a>. The unmasked portion is then enclosed by a <a href="http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html#circle">circle</a> whose center pixel is outputted into <a href="http://docs.ros.org/api/image_geometry/html/python/#image_geometry.PinholeCameraModel.projectPixelTo3dRay">projectPixelTo3dRay</a> to get the unit vector pointing to that pixel from the camera center then it is scaled up by the depth of that pixel from depth image to get the approximated ball position. Users can adjust the RGB and HSV range and the size of eroding and dilating kernel with <a href="http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html?highlight=createtrackbar#createtrackbar">trackbars</a> provided with the algorithm.</p>
 			  <p>Right now you may notice that the position of the ball is relative to the position of the camera, but it was not relative to Sawyer. Exactly!!, we have to find that relative position.</p>
                           <p><img class="img-responsive" src="assets/img/portfolio/work06_frames.png" alt=""></p>
@@ -125,7 +124,7 @@
 		  <p><b>Acknowledgements</b></p>
 		  <p>
 		    <ul>
-		      <li>Dr.Jarvis A. Schultz, the associate director of Ms in Robotics, Northwestern University, Fall 2016</li>
+		      <li>Dr.Jarvis A. Schultz, the associate director of Ms in Robotics, Northwestern University</li>
 		    </ul>
 		  <p>
 		</div>
@@ -139,10 +138,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
-					<h4>Address</h4>
+				  <h4>Address</h4>
 				  <p>
 				    2145 Sheridan Rd., Evanston, IL, 60201<br/>
-				    +1 773 865 0534, <br/>
+				    <!-- +1 773 865 0534, <br/> -->
 				    <!-- Madrid, Spain. -->
 				  </p>
 				</div><!-- /col-lg-4 -->
@@ -156,10 +155,12 @@
 					</p>
 				</div><!-- /col-lg-4 -->
 				
-				<!-- <div class="col-lg-4"> -->
-				<!-- 	<h4>About Stanley</h4> -->
-				<!-- 	<p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p> -->
-				<!-- </div><\!-- /col-lg-4 -\-> -->
+				<div class="col-lg-4">
+					<h4>E-Mail</h4>
+					<p>
+						<a href="mailto:cnt.tanakul@gmail.com">cnt.tanakul@gmail.com</a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
 			
 			</div>
 		
