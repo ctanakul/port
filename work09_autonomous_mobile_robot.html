@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>CHAINATEE TANAKULRUNGSON</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">CHAINATEE TANAKULRUNGSON</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assets/resume.pdf">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	
+	<!-- +++++ Projects Section +++++ -->
+	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+			  <h3>AUTONOMOUS MOBILE ROBOT</h3>
+			  <hr>
+			</div>
+			<div class="col-lg-15">
+			  <p>&nbsp;</p>
+			  <p>&nbsp;</p>
+													<!-- <p><img class="img-responsive" src="assets/img/portfolio/work06_sawyer_catch_ball_diagram.png" alt=""></p> -->
+											
+				<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/oIMRqmu5J4M" frameborder="0" allowfullscreen></iframe></center></p>
+			  <p><b><font size="5">Overview</font></b></p>			  
+			  <p><font size="4">At present, airplane parts are handled by humans. There has been an attempt to use robots to facilitate and substitute human in some tasks. In the collaboration between Boeing and NxR Lab of Northwestern University, the plan for designing robots for airplane assembly has been initiated.</font></p>
+			  <p><font size="4">The robots are expected to work in a group of three. Each of them should be able to move freely in two dimensions on the factory floor and attached with end-effector for grasping parts. A part will be held by the manipulator located on each robot. A human user must be able to control the movement of the part freely in six degree-of-freedom.
+				</font></p>
+				<p><font size="4">This project is separated into two subtasks. First, the design and fabrication of attached robot manipulator. Second, wheeled mobile robot. The goal of this project and documentation is the development and fabrication of wheeled mobile robot.</font></p>	
+				<p><font size="4">This report constitutes three parts which are, the mobile base selection, the design and assembly of the mechanical system, and the electrical system of the mobile base.</font></p>	
+				
+
+			  <p><b>The Mobile Base Selection</b></p>
+	
+			  <p>The mobile base should follow these baseline criteria
+			    <li>The robots must be able to move freely in two dimensions on the factory floor.</li>
+			    <li>While working in a group of three, the orientation of the handled part must be stationary.</li>
+			    <li>A robot should support at least 35 kg.</li>
+			    <li>It is preferred to use a 24V power supply that can be extended to other add-ons.</li>
+					<li>A robot can communicate with the primary computer system and other robots.</li>
+					<li>A robot can process self-odometry and operate based on the six degree-of-freedom controlled by a human.</li>
+			  </p>
+
+			  <p>After several design reviews, the solution suited most with all criteria and is <a href="https://www.superdroidrobots.com/shop/item.aspx/programmable-mecanum-wheel-vectoring-robot-ig52-db/1788/">Programmable Mecanum Wheel Vectoring Mobile Robot - IG 52 DB model</a></p>
+			  
+			  <p><b>The mechanical system design and assembly</b></p>
+			  <p>The assembly of the robot comprises three parts, the upper, middle and lower floor of the robot. The upper will locate the robot manipulator. The middle will locate batteries and electrical components. The lower is where the mechanical system is situated.</p>
+			  <p>The mechanical system is a chain-driven system with double bearing support on each wheel. Each wheel is driven by a different motor.</p>
+
+
+			  <p><b>The electrical system design and prototype</b></p>
+			  <p><center><img class="img-responsive" src="assets/img/portfolio/work08_electricaldiagram.JPG" alt=""> &nbsp; The electrical schematic diagram &nbsp;</center></p>
+			  <p><center><img class="img-responsive" src="assets/img/portfolio/work08_electricalUnderRobot.JPG" alt=""> &nbsp; The electrical components under the robot <br></br><img class="img-responsive" src="assets/img/portfolio/work08_electricalBatteriesOnRobot.JPG" alt=""> &nbsp; Two 24 volts batteries</center></p>
+			  <p><center><img class="img-responsive" src="assets/img/portfolio/work08_electricalFirstFloorShelf.JPG" alt=""> &nbsp; The first floor of the shelf for electrical components <br></br><img class="img-responsive" src="assets/img/portfolio/work08_electricalShelf2Floors.JPG" alt=""> &nbsp; The second floor of the shelf for electrical components</center></p>
+
+			  <p>Above is the electrical schematic diagram of the system. We use two 12 Volt batteries to provide 24 Volt power supply for the system. The voltage is then converted into 5 and 12 Volt for use with PIC microchip and JETSON. The NVidia JETSON board is used as an onboard computer to communicate with PIC microchip to control the movement of the robot. The 24 Volt power supply is also used for two motor controllers. Each motor controller is connected to Kangaroo x2 motion controller used as a device for tuning feedback controller of each wheel.</p>
+
+			  
+			  <p><b>Tuning the Kangaroo and Setting up for RC Control</b></p>
+			  <p>Kangaroo is a device for auto-tuning the Sabertooth motor controller. We also connect RC receiver to Kangaroo for controlling the robot remotely. The setup of the control is such that each axis of the joysticks controls an individual wheel. For example, the throttle control (up-down on the left joystick) controls the rear left wheel, while the rudder control (left-right on the left joystick) controls the front right wheel. The right joystick has a similar setup for the other wheels.</p>
+
+			  
+
+			  <p><b>Progress and Next step</b></p>
+			  <p>At present, the robot can be controlled by a joystick. However, the control is counter-intuitive from RC controller. Thus, the next step is to control the robot with a microcontroller with Linux computer using NVIDIA JETSON onboard computer to communicate with the PIC microchip. The robot manipulator is also needed to be set up on the robot.</p>
+
+			  <p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/yWfgmv3jfr8" frameborder="0" allowfullscreen></iframe></center></p>
+			   
+
+			  <p><b>Let's see more</b></p>
+			  <p><a href="https://youtu.be/yWfgmv3jfr8">Youtube</a>
+
+
+			</div>
+		</div>
+		<!-- <div class="row mt centered">	 -->
+		<!--   <p><iframe width="840" height="472.5" src="https://www.youtube.com/embed/ngZCMMJjaLA" frameborder="0" allowfullscreen></iframe></p> -->
+		<!-- </div> -->
+		<div class="row mt">
+
+		  <p><b>Teammates</b></p>
+		  <p>
+		    <ul>
+		      <li>Elton Cheng, the MS in Robotics candidate, Northwestern University</li>
+		      <li>Yuchen Rao, the MS in Robotics candidate, Northwestern University</li>
+		    </ul>
+		  </p>
+		  <p><b>Acknowledgements</b></p>
+		  <p>
+		    <ul>
+		      <li>Dr.Jarvis A. Schultz, the associate director of Ms in Robotics, Northwestern University</li>
+		    </ul>
+		  </p>
+		</div>
+
+	</div><!-- /container -->
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+				  <h4>Address</h4>
+				  <p>
+				    2145 Sheridan Rd., Evanston, IL, 60201<br/>
+				    <!-- +1 773 865 0534, <br/> -->
+				    <!-- Madrid, Spain. -->
+				  </p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>Links</h4>
+					<p>
+						<a href="https://github.com/ctanakul">Github</a><br/>
+						<a href="https://www.linkedin.com/in/chainatee-tanakulrungson">Linkedin</a><br/>
+						<!-- <a href="#">Facebook</a> -->
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>E-Mail</h4>
+					<p>
+						<a href="mailto:cnt.tanakul@gmail.com">cnt.tanakul@gmail.com</a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
