@@ -73,17 +73,27 @@
 
 			  <p><b>Hardware connection design and testing</b></p>
 	
-			  <p><center><img class="img-responsive" src="assets/img/portfolio/work09_car.jpg" alt=""> &nbsp; The car design &nbsp;</center></p>
-				<p>The mobile base has two wheels, and each wheel connects to a motor. The motors are driven by the PIC32 microchip which exchanges information with the Android phone.</p>
-				<p>The base is fabricated by laser cutting and 3D printing.</p>
+			  <p><center><img class="img-responsive" src="assets/img/portfolio/work10_hardware_diagram.png" alt=""> &nbsp; Hardware connection diagram &nbsp;</center></p>
+			  <p>The motor requires the use of <a href="https://en.wikipedia.org/wiki/RS-485">RS-485 standard</a> for the communication between the host computer and the motor. The communication is done through <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter">UART</a></p>. 
 
-			  <p><b>Result</b></p>
-			  <p>The car can finish the loop within 2 minutes and 3 seconds without veering of txhe track.</p>
+			  <p><b>serial programming for POSIX operating system</b></p>
+	
+			  <p>To communicate between the host and the motor, a c code for <a href="https://www.cmrr.umn.edu/~strupp/serial.html">serial programming for POSIX operating system</a> is needed. The code is used for controlling the process of opening, closing, configuring and conducting other necessary operations such as polling or waiting until data arrives into a read buffer. Moreover, for RS-485, the flow control must be disabled since there are no wires sending hardware flow control information between the two entities. The quality of code was tested by sending a command and receiving a response from motor for 1000 times. No errors were shown.</p>. 
 
+			  <p><b>API design and writing</b></p>
+	
+			  <p><center><img class="img-responsive" src="assets/img/portfolio/work10_API.png" alt=""> &nbsp; API list &nbsp;</center></p>
+			  <p>The high-level API is divided into three seperate groups of functions which are power and configurations, position control, and velocity profile control functions. Under the hood, all they do is communicating with the motor through SCL syntax by Applied Motion System.</p>. 
+
+
+			  <p><b>Examples</b></p>
+			  <p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/u5XH3D2TOtM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></p>
+			  <p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/TW2ptEQS2BQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></p>
+			  <p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/KrBi_z5h8I4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></p>
 			   
 
 			  <p><b>Let's see more</b></p>
-			  <p><a href="https://github.com/ctanakul/ctanakul-ME433-2017">GitHub</a>
+			  <p><a href="https://github.com/NU-MSR/boeing_communication">GitHub</a>(need a permission)</p>
 
 
 			</div>
@@ -95,8 +105,8 @@
 		  <p><b>Acknowledgements</b></p>
 		  <p>
 		    <ul>
-					<li>Nicholas Marchuk, Senior Lecturer in Mechanical Engineering, Northwestern University</li>
-					<li>This project is a part of MECH 433 Advanced Mechatronics, Fall 2017</li>
+					<li>Jarvis Schults, Associate Director, MS in Robotics, Northwestern University</li>
+					<li>Matthew Elwin, Ph.D in Mechanical Engineering, Northwestern University</li>
 		    </ul>
 		  </p>
 		</div>
