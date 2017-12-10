@@ -72,11 +72,11 @@
 			  <p><b>Hardware connection design and testing</b></p>
 	
 			  <p><center><img class="img-responsive" src="assets/img/portfolio/work_10_hardware_diagram.png" alt=""> &nbsp; Hardware connection diagram &nbsp;</center></p>
-			  <p>The motor requires the use of <a href="https://en.wikipedia.org/wiki/RS-485">RS-485 standard</a> for the communication between the host computer and the motor. The communication is done through <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter">UART protocol</a></p>. 
+			  <p>The motor requires the use of <a href="https://en.wikipedia.org/wiki/RS-485">RS-485 standard</a> for the communication between the host computer and the motor. The communication is done through <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter">UART protocol.</a></p>
 
 			  <p><b>serial programming for POSIX operating system</b></p>
 	
-			  <p>To communicate between the host and the motor, a c code for <a href="https://www.cmrr.umn.edu/~strupp/serial.html">serial programming for POSIX operating system</a> is needed. The code is used for controlling the process of opening, closing, configuring and conducting other necessary operations such as polling or waiting until data arrives into a read buffer. Moreover, for RS-485, the flow control must be disabled since there are no wires sending hardware flow control information between the two entities. The quality of code was tested by sending a command and receiving a response from motor for 1000 times. No errors were shown.</p>. 
+			  <p>To communicate between the host and the motor, a c code for <a href="https://www.cmrr.umn.edu/~strupp/serial.html">serial programming for POSIX operating system</a> is needed. The code is used for controlling the process of opening, closing, configuring and conducting other necessary operations such as polling or waiting until data arrives into a read buffer. Moreover, for RS-485, the flow control must be disabled since there are no wires sending hardware flow control information between the two entities. The quality of code was tested by sending a command and receiving a response from motor for 1000 times. No errors were shown.</p>
 
 			  <p><b>API design and writing</b></p>
 	
